@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - ECOSHOOT</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="container">
+      <h1><a href="index.html" style="color: inherit; text-decoration: none;">🌿 ECOSHOOT</a></h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="login.html" class="btn-login">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Dashboard Section -->
+  <section class="dashboard">
+    <div class="container">
+      <h2>Your Impact Dashboard</h2>
+
+      <!-- Progress Bar -->
+      <div class="progress-container">
+        <h3>Carbon Footprint Progress</h3>
+        <div class="progress-bar">
+          <div class="progress" id="progress"></div>
+        </div>
+        <p>You've offset <span id="offsetValue">0</span> kg CO₂ so far!</p>
+      </div>
+
+      <!-- Graph -->
+      <div class="graph-container">
+        <h3>Carbon Footprint Breakdown</h3>
+        <canvas id="carbonChart"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2023 ECOSHOOT. Made with ❤️ for a greener planet.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Function to retrieve user data from localStorage
+    function getUserData() {
+      const dataString = localStorage.getItem('userData');
+      if (dataString) {
+        return JSON.parse(dataString);
+      }
+      return null; // Return null if no data is found
+    }
+
+    // Function to update the dashboard with user data
+    function updateDashboard() {
+      const userData = getUserData();
+
+      if (userData) {
+        // Update progress bar
+        const progress = document.getElementById('progress');
+        const offsetValue = document.getElementById('offsetValue');
+        const totalCarbon = userData.carbonFootprint;
+
+        progress.style.width = `${(totalCarbon / 1000) * 100}%`; // Assuming 1000 kg CO₂ is the max
+        offsetValue.textContent = totalCarbon.toFixed(2);
+
+        // Render the chart
+        const ctx = document.getElementById('carbonChart').getContext('2d');
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Travel', 'Electricity', 'Waste'],
+            datasets: [{
+              label: 'Carbon Footprint (kg CO₂)',
+              data: [userData.travel, userData.electricity, userData.waste],
+              backgroundColor: [
+                'rgba(75, 192, 192, 0.6)',
+                'rgba(54, 162, 235, 0.6)',
+                'rgba(255, 99, 132, 0.6)',
+              ],
+              borderColor: [
+                'rgba(75, 192, 192, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 99, 132, 1)',
+              ],
+              borderWidth: 1,
+            }],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+                title: {
+                  display: true,
+                  text: 'kg CO₂',
+                },
+              },
+            },
+          },
+        });
+      } else {
+        // If no data is found, display a message
+        document.getElementById('offsetValue').textContent = 'No data found. Please calculate your carbon footprint first.';
+      }
+    }
+
+    // Call the function to update the dashboard when the page loads
+    window.onload = updateDashboard;
+  </script>
+</body>
+</html>

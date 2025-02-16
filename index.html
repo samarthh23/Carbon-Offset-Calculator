@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECOSHOOT - Carbon Footprint Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="container">
+      <h1><a href="index.html" style="color: inherit; text-decoration: none;">🌿 ECOSHOOT</a></h1>
+      <ul>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="login.html" class="btn-login">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <h1 class="animate__animated animate__fadeInDown">Calculate Your Carbon Footprint</h1>
+      <p class="animate__animated animate__fadeInUp">Take the first step towards a greener planet with ECOSHOOT.</p>
+      <a href="calculator.html" class="btn animate__animated animate__pulse animate__infinite">Get Started</a>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <h2>Our Features</h2>
+      <p>Discover how our website can help you make a positive impact.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <i class="fas fa-calculator"></i>
+          <h3><a href="calculator.html" style="color: inherit; text-decoration: none;">Carbon Footprint Calculation</a></h3>
+          <p>Calculate your carbon footprint with ease.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-lightbulb"></i>
+          <h3><a href="recommendations.html" style="color: inherit; text-decoration: none;">Personalized Recommendations</a></h3>
+          <p>Receive tailored suggestions to reduce your carbon footprint.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-chart-line"></i>
+          <h3><a href="track.html" style="color: inherit; text-decoration: none;">Track Progress</a></h3>
+          <p>Monitor your carbon reduction efforts over time.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-book"></i>
+          <h3><a href="resources.html" style="color: inherit; text-decoration: none;">Educational Resources</a></h3>
+          <p>Access a library of resources to learn more about sustainability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner Section -->
+  <section class="banner">
+    <div class="container">
+      <h2>Take Control of Your Carbon Footprint</h2>
+      <p>Our carbon footprint calculator helps you understand your impact on the environment and provides measures to reduce it. By calculating your carbon footprint, you can make informed decisions and take steps towards a more sustainable lifestyle.</p>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        <div class="faq-card">
+          <h3>What is a carbon footprint?</h3>
+          <p>A carbon footprint is the total amount of greenhouse gases, primarily carbon dioxide, emitted directly or indirectly by an individual, organization, event, or product.</p>
+        </div>
+        <div class="faq-card">
+          <h3>Why should I calculate my carbon footprint?</h3>
+          <p>Calculating your carbon footprint helps you understand the impact of your activities on the environment and allows you to take measures to reduce your emissions.</p>
+        </div>
+        <div class="faq-card">
+          <h3>How can I calculate my carbon footprint?</h3>
+          <p>You can calculate your carbon footprint by considering factors such as energy usage, transportation, waste generation, and lifestyle choices. Our website provides a user-friendly calculator to help you determine your carbon footprint.</p>
+        </div>
+        <div class="faq-card">
+          <h3>What measures can I take to reduce my carbon footprint?</h3>
+          <p>There are several measures you can take, such as conserving energy, using renewable energy sources, reducing waste, adopting sustainable transportation options, and making eco-friendly lifestyle choices.</p>
+        </div>
+        <div class="faq-card">
+          <h3>Can I offset my carbon emissions?</h3>
+          <p>Yes, you can offset your carbon emissions by supporting projects that reduce greenhouse gas emissions or remove carbon dioxide from the atmosphere. Our website provides information on carbon offsetting options.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2023 ECOSHOOT. Made with ❤️ for a greener planet.</p>
+    </div>
+  </footer>
+
+  <!-- Chatbot Container -->
+  <div class="chatbot-container">
+    <iframe
+      allow="microphone;"
+      width="350"
+      height="430"
+      src="https://console.dialogflow.com/api-client/demo/embedded/455e4528-511d-4055-8bd2-b51957d882f9">
+    </iframe>
+  </div>
+
+  <!-- Optional Scripts -->
+  <script src="script.js"></script>
+
+  <!-- Chatbot Styling -->
+  <style>
+    .chatbot-container {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000; /* Ensure it's above other elements */
+    }
+
+    .chatbot-container iframe {
+      border: none;
+      border-radius: 10px;
+    }
+  </style>
+</body>
+</html>

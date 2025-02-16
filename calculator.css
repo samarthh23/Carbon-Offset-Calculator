@@ -1,0 +1,252 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Navbar */
+  nav {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav h1 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  /* Calculator Section */
+  .calculator {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #f0f8ff, #e0f7fa);
+  }
+  
+  .calculator h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #4CAF50;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+  }
+  
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #45a049;
+  }
+  
+  /* Results Section */
+  .results {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #e0f7fa, #f0f8ff);
+  }
+  
+  .results h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #4CAF50;
+  }
+  
+  .result-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .result-card p {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .strategies {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .strategy-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1 1 300px;
+  }
+  
+  .strategy-card i {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 10px;
+  }
+  
+  .strategy-card p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+  }
+  
+  /* Footer */
+  footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  /* Dashboard Section */
+.dashboard {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #f0f8ff, #e0f7fa);
+  }
+  
+  .dashboard h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #4CAF50;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0;
+  }
+  
+  .progress {
+    width: 0;
+    height: 20px;
+    background: #4CAF50;
+    transition: width 0.5s ease;
+  }
+  
+  #offsetValue {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #4CAF50;
+  }
+
+  /* Calculator Section */
+.calculator {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #f0f8ff, #e0f7fa);
+}
+
+.calculator h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #34A853;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.calculator .form-group {
+  margin-bottom: 20px;
+}
+
+.calculator .form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.calculator .form-group input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: white;
+  color: #333;
+}
+
+.calculator .btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #34A853, #2E8B57);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.calculator .btn:hover {
+  background: linear-gradient(135deg, #2E8B57, #34A853);
+  transform: translateY(-5px);
+}

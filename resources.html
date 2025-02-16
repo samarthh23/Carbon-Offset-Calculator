@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Educational Resources - ECOSHOOT</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="container">
+      <h1><a href="index.html" style="color: inherit; text-decoration: none;">🌿 ECOSHOOT</a></h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="recommendations.html">Recommendations</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="login.html" class="btn-login">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Resources Section -->
+  <section class="resources">
+    <div class="container">
+      <h2>Educational Resources</h2>
+      <p>Explore a library of resources to learn more about sustainability and how you can make a positive impact on the environment.</p>
+
+      <div class="resource-grid">
+        <!-- Articles -->
+        <div class="resource-card">
+          <i class="fas fa-newspaper"></i>
+          <h3>Articles</h3>
+          <ul>
+            <li><a href="https://www.un.org/sustainabledevelopment/sustainable-development-goals/" target="_blank">UN Sustainable Development Goals</a></li>
+            <li><a href="https://www.nationalgeographic.com/environment/" target="_blank">National Geographic Environment</a></li>
+            <li><a href="https://www.wwf.org.uk/what-we-do/area-of-work/climate-change-and-energy" target="_blank">WWF Climate Change</a></li>
+          </ul>
+        </div>
+
+        <!-- Videos -->
+        <div class="resource-card">
+          <i class="fas fa-video"></i>
+          <h3>Videos</h3>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=G4H1N_yXBiA" target="_blank">The Story of Stuff</a></li>
+            <li><a href="https://www.youtube.com/watch?v=5eTCZ9L834s" target="_blank">Climate Change 101</a></li>
+            <li><a href="https://www.youtube.com/watch?v=8q7_aV8eLUE" target="_blank">The Carbon Cycle</a></li>
+          </ul>
+        </div>
+
+        <!-- Tools -->
+        <div class="resource-card">
+          <i class="fas fa-tools"></i>
+          <h3>Tools</h3>
+          <ul>
+            <li><a href="https://www.carbonfootprint.com/calculator.aspx" target="_blank">Carbon Footprint Calculator</a></li>
+            <li><a href="https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator" target="_blank">EPA Greenhouse Gas Calculator</a></li>
+            <li><a href="https://www.footprintcalculator.org/" target="_blank">Ecological Footprint Calculator</a></li>
+          </ul>
+        </div>
+
+        <!-- Books -->
+        <div class="resource-card">
+          <i class="fas fa-book"></i>
+          <h3>Books</h3>
+          <ul>
+            <li><a href="https://www.drawdown.org/the-book" target="_blank">Drawdown by Paul Hawken</a></li>
+            <li><a href="https://www.thischangeseverything.org/" target="_blank">This Changes Everything by Naomi Klein</a></li>
+            <li><a href="https://www.braiding-sweetgrass.com/" target="_blank">Braiding Sweetgrass by Robin Wall Kimmerer</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2023 ECOSHOOT. Made with ❤️ for a greener planet.</p>
+    </div>
+  </footer>
+
+  <!-- Chatbot Container -->
+  <div class="chatbot-container">
+    <iframe
+      allow="microphone;"
+      width="350"
+      height="430"
+      src="https://console.dialogflow.com/api-client/demo/embedded/455e4528-511d-4055-8bd2-b51957d882f9">
+    </iframe>
+  </div>
+
+  <!-- Chatbot Styling -->
+  <style>
+    .chatbot-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000; /* Ensure it's above other elements */
+    }
+
+    .chatbot-container iframe {
+      border: none;
+      border-radius: 10px;
+    }
+  </style>
+</body>
+</html>
